@@ -28,7 +28,7 @@ curl -O https://raw.githubusercontent.com/coloredbytes/jershs-scripts/main/shell
 
 ```shell
 # Pull Script
-curl -o https://raw.githubusercontent.com/coloredbytes/jershs-scripts/main/shell/sig-create.sh
+curl -O https://raw.githubusercontent.com/coloredbytes/jershs-scripts/main/shell/sig-create.sh
 
 # Run Script
 ./sig-create.sh
@@ -39,7 +39,7 @@ curl -o https://raw.githubusercontent.com/coloredbytes/jershs-scripts/main/shell
 ```shell
 # Pull Script
 
-curl -o https://raw.githubusercontent.com/coloredbytes/jershs-scripts/main/shell/import-ova.sh
+curl -O https://raw.githubusercontent.com/coloredbytes/jershs-scripts/main/shell/import-ova.sh
 
 # Run Script
 ./import-ova.sh
