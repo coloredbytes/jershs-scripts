@@ -49,7 +49,7 @@ if [ -n "$OVF_FILE" ]; then
 
     # Import the OVF into Proxmox using qm importovf
     echo "Importing the OVF into Proxmox..."
-    qm importovf "$VM_ID" "$OVF_FILE" "$STORAGE_NAME" --format qcow2 || cleanup
+    qm importovf "$VM_ID" "$OVF_FILE" "$STORAGE_NAME" --format raw || cleanup
 
     echo "Import completed successfully."
 
