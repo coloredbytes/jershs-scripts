@@ -33,4 +33,15 @@ curl -o https://raw.githubusercontent.com/coloredbytes/jershs-scripts/main/shell
 # Run Script
 ./sig-create.sh
 ```
+### Import OVA
+
+- Import Virtual Appliance into Proxmox
+```shell
+# Pull Script
+
+curl -o https://raw.githubusercontent.com/coloredbytes/jershs-scripts/main/shell/import-ova.sh
+
+# Run Script
+./import-ova.sh
+```
 </details>
