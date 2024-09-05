@@ -24,3 +24,5 @@ I made this repo as I usually make one of scripts on different computers and wan
 ## :link:  Contents
 
 [Shell](/shell/) -- Shell scripts that I've made.
+
+[Proxmox](/proxmox/) -- Proxmox scripts that I've made.
