@@ -6,7 +6,7 @@
 ```shell
 # Pull Script
 
-curl -O https://raw.githubusercontent.com/coloredbytes/jershs-scripts/main/proxmox/import-ova.sh
+curl -O https://raw.githubusercontent.com/coloredbytes/scripts/main/proxmox/import-ova.sh
 
 # Run Script
 ./import-ova.sh
