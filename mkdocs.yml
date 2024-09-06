@@ -1,5 +1,5 @@
 site_name: "Jersh's Useful Scripts"
-site_url: https://scripts.rossjm.dev/
+site_url: https://rossjm.dev/scripts
 nav:
   - Home: index.md
   - Shell: shell.md
@@ -8,8 +8,8 @@ nav:
 
 
 theme:
-    # favicon: images/favicon-32x32.png
-    # logo: images/apple-touch-icon.png
+    favicon: images/terminal.png
+    logo: images/terminal.png
     name: material
     features:
     - navigation.tabs
