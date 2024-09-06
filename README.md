@@ -1,7 +1,3 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src=".asssets/terminal.png" alt="Project logo"></a>
-</p>
 
 <h3 align="center"> Jersh's Scripts </h3>
 
