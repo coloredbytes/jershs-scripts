@@ -7,7 +7,11 @@
 - Install Powershell on Linux
 
 ```shell
-curl -s https://raw.githubusercontent.com/coloredbytes/scripts/main/shell/powersheller.sh | bash
+# Pull Script
+curl -O https://raw.githubusercontent.com/coloredbytes/scripts/main/shell/powersheller.sh
+
+# Run Script
+./powersheller.sh
 ```
 
 ### Push 2 Git
@@ -16,7 +20,7 @@ curl -s https://raw.githubusercontent.com/coloredbytes/scripts/main/shell/powers
 
 ```shell
 # Pull Script
-curl -O https://raw.githubusercontent.com/coloredbytes/scripts/main/shell/push-to-github.sh
+curl -O https://raw.githubusercontent.com/coloredbytes/scripts/main/shell/push-2-git.sh
 
 # Run Script
 ./push-to-github.sh
