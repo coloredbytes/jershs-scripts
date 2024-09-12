@@ -32,3 +32,14 @@ curl -O https://raw.githubusercontent.com/coloredbytes/scripts/main/shell/sig-cr
 # Run Script
 ./sig-create.sh
 ```
+### Case Insensitive
+
+-  Enable Tab auto-completion case-insensitive in Bash
+
+```shell
+# Pull Script
+curl -O https://raw.githubusercontent.com/coloredbytes/scripts/main/shell/case-insensitive.sh
+
+# Run Script
+./case-insensitive.sh
+```
