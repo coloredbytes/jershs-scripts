@@ -47,3 +47,16 @@ curl -O https://raw.githubusercontent.com/coloredbytes/scripts/main/shell/case-i
 # Run Script
 ./case-insensitive.sh
 ```
+
+### Ez-Docker-Installer
+
+-  OS Agnostic Docker install script , with the option to install portainer.
+
+```shell
+# Pull Script
+curl -O https://raw.githubusercontent.com/coloredbytes/scripts/main/shell/ez-docker-installer.sh
+
+# Run Script
+./ez-docker-installer.sh
+```
+
