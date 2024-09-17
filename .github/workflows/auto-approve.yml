@@ -4,27 +4,30 @@ on:
   pull_request:
     types: [opened, reopened, synchronize]
 
-  workflow_dispatch:  # This allows you to manually trigger the workflow
+  workflow_dispatch:  # Allows manual triggering for open PRs
 
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.user.login == 'renovate[bot]' || github.event_name == 'workflow_dispatch'
+
     steps:
-      - name: Get open pull requests
-        uses: actions/github-script@v6
+      - name: Get open pull requests from renovate[bot]
         id: pr
+        uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const { data: pulls } = await github.pulls.list({
+            const pulls = await github.pulls.list({
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open'
             });
-            return pulls.filter(pr => pr.user.login === 'renovate[bot]');
-        
+            const renovatePRs = pulls.data.filter(pr => pr.user.login === 'renovate[bot]');
+            return renovatePRs.map(pr => pr.number);
+
       - name: Approve PRs
-        uses: hmarr/auto-approve-action@v3.0.0
+        if: steps.pr.outputs.length > 0
+        uses: hmarr/auto-approve-action@v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-        if: steps.pr.outputs.length > 0
+        for_each: pr_number in steps.pr.outputs
