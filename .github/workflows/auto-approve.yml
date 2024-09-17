@@ -1,14 +1,30 @@
-name: Auto approve
+name: Auto Approve Renovate Pull Requests
 
-on: pull_request_target
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+  workflow_dispatch:  # This allows you to manually trigger the workflow
 
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    if: github.actor == 'renovate[bot]'
+    if: github.event.pull_request.user.login == 'renovate[bot]' || github.event_name == 'workflow_dispatch'
     steps:
-      - uses: hmarr/auto-approve-action@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Get open pull requests
+        uses: actions/github-script@v6
+        id: pr
+        with:
+          script: |
+            const { data: pulls } = await github.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open'
+            });
+            return pulls.filter(pr => pr.user.login === 'renovate[bot]');
+        
+      - name: Approve PRs
+        uses: hmarr/auto-approve-action@v3.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        if: steps.pr.outputs.length > 0
