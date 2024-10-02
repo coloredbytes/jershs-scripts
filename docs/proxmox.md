@@ -12,3 +12,13 @@ curl -O https://raw.githubusercontent.com/jershbytes/scripts/main/proxmox/import
 ./import-ova.sh
 ```
 
+### Docker LXC
+- Install Docker in LXC
+```shell
+# Pull Script
+
+curl -O https://raw.githubusercontent.com/jershbytes/scripts/main/proxmox/docker-lxc.sh
+
+# Run Script
+./docker-lxc.sh
+```
