@@ -34,7 +34,7 @@ docker_install
 usermod -aG docker "$CREATED_USER"
 
 ### Reboot The Server ###
-echo "[+] Rebooting Servier for safe measures..."
+echo "[+] Rebooting Server for safe measures..."
 reboot
 
 
