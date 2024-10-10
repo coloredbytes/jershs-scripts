@@ -60,3 +60,16 @@ curl -O https://raw.githubusercontent.com/jershbytes/scripts/main/shell/ez-docke
 ./ez-docker-installer.sh
 ```
 
+### npm Bootstrap
+
+-  Tiny scrpit to initialize npm project and create the `index.html` file to start a base level bootstrap project.
+
+```shell
+# Pull Script
+curl -O https://raw.githubusercontent.com/jershbytes/scripts/main/shell/npm-bootstrap.sh
+
+# Run Script
+./npm-bootstrap.sh
+```
+
+
